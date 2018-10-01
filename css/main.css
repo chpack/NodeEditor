@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+}
+
+#editor_view {
+    /* width: 100px; */
+    /* height: 100px; */
+    background: #58a;
+    position: absolute;
+    overflow: scroll;
+}
+
+#editor_area {
+    /* width: 600px; */
+    height: 4000px;
+    width: 4000px;
+    /* padding: 1000px; */
+    background: #58a;
+    border: 1px solid #aaaaaa;
+    background-image: 
+    linear-gradient(0deg, rgba(255, 255, 255, .05) 0.25px, transparent 0), 
+    linear-gradient(0deg, rgba(255, 255, 255, .2) 0.5px, transparent 0), 
+    linear-gradient(0deg, rgba(255, 255, 255, .4) 1.0px, transparent 0), 
+    linear-gradient(0deg, rgba(255, 255, 255, .6) 2.0px, transparent 0), 
+    linear-gradient(90deg, rgba(255, 255, 255, .05) 0.25px, transparent 0), 
+    linear-gradient(90deg, rgba(255, 255, 255, .2) 0.5px, transparent 0), 
+    linear-gradient(90deg, rgba(255, 255, 255, .4) 1.0px, transparent 0), 
+    linear-gradient(90deg, rgba(255, 255, 255, .6) 2.0px, transparent 0);
+    background-size:4px 4px, 16px 16px, 64px 64px, 256px 256px;
+}
+
+#editor_area_background {
+    width: 100%;
+    height: 100%;
+}
+
+#temp_target {
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+
+#contral_bar {
+    position: absolute;
+    left: 0px;
+    width: 100px
+}
