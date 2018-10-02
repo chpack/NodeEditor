@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    overflow: hidden;
 }
 
 #editor_view {
@@ -7,7 +8,7 @@ body {
     /* height: 100px; */
     background: #58a;
     position: absolute;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 #editor_area {
@@ -42,6 +43,31 @@ body {
 
 #contral_bar {
     position: absolute;
+    /* left: 0px;
+    width: 0px */
+}
+
+#minimap {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border: 1px solid #aaaaaa;
+
+    width: 200px;
+    height: 200px;
+}
+
+#minimap_canvas {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .05)
+}
+
+#minimap_view {
+    position: absolute;
+    top: 0px;
     left: 0px;
-    width: 100px
+    background: rgba(255, 255, 255, .4);
+    width: 64px;
+    height: 64px;
 }
