@@ -23,39 +23,35 @@ function initNodeEditor() {
     CS.areaW = 4000;
     CS.areaH = 4000;
 
-    editorViewResize();
-    editorViewReplace();
-    minimapResize();
-    minimapReplace();
+    editorViewReset();
+    minimapReset();
 }
 
 window.onload = initNodeEditor
 
-function editorViewReplace() {
+// Reset editor View.
+function editorViewReset() {
     NE.editorView.scrollTo(1000, 1000);
-}
-
-function editorViewResize() {
     NE.editorView.style.height = window.innerHeight + "px";
     NE.editorView.style.width = window.innerWidth + "px";
 }
 
-function minimapResize() {
+// Reset minimap's width and height.
+function minimapReset() {
     NE.minimap.style.width = NE.editorArea.offsetWidth * CS.minimapRate + "px";
     NE.minimap.style.height = NE.editorArea.offsetHeight * CS.minimapRate + "px";
-    NE.minimapView.style.width = NE.editorView.offsetWidth * CS.minimapRate / CS.scale + "px";
-    NE.minimapView.style.height = NE.editorView.offsetHeight * CS.minimapRate / CS.scale + "px";
 }
 
-function minimapReplace() {
+// Reset minimap view scale and position.
+function minimapViewReset() {
+    NE.minimapView.style.width = NE.editorView.offsetWidth * CS.minimapRate / CS.scale + "px";
+    NE.minimapView.style.height = NE.editorView.offsetHeight * CS.minimapRate / CS.scale + "px";
+
     NE.minimapView.style.left = NE.editorView.scrollLeft * CS.minimapRate / CS.scale + "px";
     NE.minimapView.style.top = NE.editorView.scrollTop * CS.minimapRate / CS.scale + "px";
 }
 
-function trans(rot, sca) {
-    NE.editorArea.style.transform = "rotate(" + rot + "deg) scale(" + sca + "," + sca + ")";
-}
-
+// Scale editor area.
 function scale(times) {
     var di = times > 0 ? 1 : -1;
     var newIndex = CS.scaleindex + di;
@@ -67,17 +63,17 @@ function scale(times) {
 
     CS.scaleindex = newIndex
     CS.scale = newScale;
-
     NE.editorArea.style.transform = "scale(" + CS.scale + "," + CS.scale + ")";
+
     NE.editorView.scrollLeft += (CS.mouseX - CS.areaW / 2) * (newScale - oldScale);
     NE.editorView.scrollTop += (CS.mouseY - CS.areaH / 2) * (newScale - oldScale);
-    minimapResize();
-    minimapReplace();
+
+    minimapViewReset();
 }
 
 window.onresize = function () {
-    editorViewResize();
-    editorViewReplace();
+    editorViewReset();
+    minimapReset();
 }
 
 // document.addEventListener("keyup", keyEvent)
@@ -90,7 +86,7 @@ document.addEventListener("mousemove", function (e) {
     if (e.shiftKey && CS.mouseR) {
         NE.editorView.scrollTop -= e.movementY;
         NE.editorView.scrollLeft -= e.movementX;
-        minimapReplace();
+        minimapViewReset();
     }
 })
 
