@@ -5,25 +5,25 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/scrollbar.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 
 <body>
 
     <div id="editor_view">
-        <div id="sketchpad">
-            <div id="canvas_background"></div>
-            <div id="canvas">
+        <div id="editor_area">
+            <div id="background"></div>
+            <div id="pad">
                 <img id="temp_target" src="img/ls.jpg">
             </div>
         </div>
-    </div>
-    <div id="tools_bar">
-        <div id="minimap">
-            <canvas id="minimap_canvas"></canvas>
-            <div id="minimap_view"></div>
+        <div id="map">
+            <canvas id="map_background"></canvas>
+            <div id="map_pad"></div>
         </div>
     </div>
+
 
 </body>
 
