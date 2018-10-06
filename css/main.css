@@ -4,8 +4,6 @@ body {
 }
 
 #editor_view {
-    /* background: #58a; */
-    /* position: absolute; */
     overflow: hidden;
 }
 
@@ -41,12 +39,6 @@ body {
     top: 300px;
 }
 
-#contral_bar {
-    position: absolute;
-    /* left: 0px;
-    width: 0px */
-}
-
 #map {
     position: absolute;
     right: 0px;
@@ -70,4 +62,12 @@ body {
     background: rgba(255, 255, 255, .4);
     width: 64px;
     height: 64px;
+}
+
+#cursor {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border:1px solid #111;
+    border-radius: 8px;
 }
