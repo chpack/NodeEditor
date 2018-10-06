@@ -28,15 +28,11 @@ body {
 
     background: #58c;
     background-image: 
-    linear-gradient(0deg, rgba(255, 255, 255, .05) 0.25px, transparent 0), 
-    linear-gradient(0deg, rgba(255, 255, 255, .2) 0.5px, transparent 0), 
     linear-gradient(0deg, rgba(255, 255, 255, .4) 1.0px, transparent 0), 
     linear-gradient(0deg, rgba(255, 255, 255, .6) 2.0px, transparent 0), 
-    linear-gradient(90deg, rgba(255, 255, 255, .05) 0.25px, transparent 0), 
-    linear-gradient(90deg, rgba(255, 255, 255, .2) 0.5px, transparent 0), 
     linear-gradient(90deg, rgba(255, 255, 255, .4) 1.0px, transparent 0), 
     linear-gradient(90deg, rgba(255, 255, 255, .6) 2.0px, transparent 0);
-    background-size:4px 4px, 16px 16px, 64px 64px, 256px 256px;
+    background-size:64px 64px, 256px 256px;
 }
 
 #temp_target {
